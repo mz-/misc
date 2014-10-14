@@ -20,9 +20,9 @@ def genPrime(min, max):
 	return
 
 def sieve(n):
-"""
-Generates list of all primes <= n
-"""
+	"""
+	Generates list of all primes <= n
+	"""
 	numList = [i for i in range(2, n+1)]
 	for i in numList:
 		f = range(i+i, n+1, i)
@@ -49,9 +49,9 @@ def gcd(x, y):
 		return gcd(x-y, y)
 
 def egcd(x, y):
-"""
-Extended Euclid's Alogrithm
-"""
+	"""
+	Extended Euclid's Alogrithm
+	"""
 	if (y > x):
 		d, a, b = egcd(y, x)
 		return (d, b, a)
@@ -63,9 +63,9 @@ Extended Euclid's Alogrithm
 			return (d, b, a - (x//y) *b)
 
 def mod_exp(x, y, m):
-"""
-Finds (x^y) mod m using repeated squaring
-"""
+	"""
+	Finds (x^y) mod m using repeated squaring
+	"""
 	if y == 0:
 		return 1
 	else:
@@ -76,9 +76,9 @@ Finds (x^y) mod m using repeated squaring
 			return (x*z*z) % m
 
 def inverse(x, m):
-"""
-Returns the multiplicative inverse of x mod m
-"""
+	"""
+	Returns the multiplicative inverse of x mod m
+	"""
 	inverse = egcd(x, m)[1]
 	if inverse < 0:
 		inverse += m
